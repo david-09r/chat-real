@@ -60,7 +60,7 @@ export default function App() {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (session?.access_token !== serverSession?.access_token ) {
         revalidate.revalidate()
-      }  
+      }
     })
 
     return () => subscription?.unsubscribe()

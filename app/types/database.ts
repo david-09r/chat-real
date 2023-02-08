@@ -20,7 +20,7 @@ export interface Database {
           content: string
           created_at?: string
           id?: string
-          user_id: string
+          user_id?: string
         }
         Update: {
           content?: string
@@ -37,6 +37,9 @@ export interface Database {
       [_ in never]: never
     }
     Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
       [_ in never]: never
     }
   }
